@@ -40,10 +40,55 @@ body {
     height: 100vh;
    
     color: #000;
+	background-image: url(https://wallpaper.dog/large/333834.jpg);
+    height: 100vh;
+    min-height: 480px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+	justify-content: center;
     text-align: center;
     overflow-x: hidden;
+}
+
+.quiz__container {
+	border-radius: 10px;
+	color: rgb(207, 233, 173);
+	width: 600px;
+	max-width: 100%;
+	box-shadow: 0 0 10px 5px rgba(172,16,16, 0.4);
+	background: rgb(172,16,16);
+	background: linear-gradient(115deg, rgba(172,16,16,1) 0%, rgba(187,182,24,1) 100%);
+}
+
+.quiz__header {
+	padding: 4rem 2rem 2rem;
+}
+
+.quiz__question {
+	font-size: 3rem;
+	font-weight: 600;
+}
+.quiz__list {
+	margin-left: 8rem;
+}
+.quiz__answer {
+	font-size: 1.7rem;
+	font-weight: 300;
+	margin: 1rem 0;
+	text-align: left;
+}
+.quiz__button {
+	background: rgb(62,16,172);
+	background: linear-gradient(100deg, rgba(62,16,172,1) 0%, rgba(113,111,39,1) 100%);
+	color: #fff;
+	width: 100%;
+	font-size: 2rem;
+	padding: 1.5rem 0;
+	display: block;
+	font-family: inherit;
 }
