@@ -84,7 +84,7 @@ body {
 	color: #000;
 	background-image: url(img/hogwartsBg.webp);
 	height: 100vh;
-	min-height: 480px;
+	min-height: 600px;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -232,12 +232,19 @@ body {
 	html {
 		font-size: 12px;
 	}
+	body {
+		min-height: 430px;
+	}
 	.quiz__container {
 		width: 450px;
 	}
 
 	.quiz__answer {
-		margin-left: 5.4rem;
+		margin-left: 2.4rem;
+	}
+
+	.quiz__label {
+		font-size: 1.8rem;
 	}
 
 	.quiz__question {
@@ -252,16 +259,28 @@ body {
 	html {
 		font-size: 11px;
 	}
+	body {
+		min-height: 480px;
+	}
 	.quiz__container {
-		width: 300px;
+		width: 95%;
 	}
 
 	.quiz__answer {
 		padding-left: 0rem;
+		margin-left: 1rem;
+	}
+
+	.quiz__label {
+		font-size: 1.8rem;
+	}
+
+	.quiz__header {
+		padding: 3rem 1rem 1rem;
 	}
 
 	.quiz__question {
-		font-size: 2.5rem;
+		font-size: 2.4rem;
 	}
 	.checkmark {
 		font-size: 11px;
