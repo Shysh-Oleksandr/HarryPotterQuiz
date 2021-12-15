@@ -11,29 +11,34 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="quiz__container">
+    <div class="quiz__container" id="quiz">
         <div class="quiz__header">
-            <h2 class="quiz__question">Question text</h2>
+            <span class="quiz__number">1/5</span>
+            <h2 class="quiz__question" id="question">Question text</h2>
             <ul class="quiz__list">
                 <li class="quiz__answer">
-                    <input type="radio" name="answer" id="a_text">
-                    <label for="a">Question</label>
+                    <input type="radio" class="answer" name="answer" id="a">
+                    <span class="checkmark"></span>   
+                    <label class="quiz__label" id="a_text" for="a">Question</label>
                 </li>
                 <li class="quiz__answer">
-                    <input type="radio" name="answer" id="b_text">
-                    <label for="b">Question</label>
+                    <input type="radio" class="answer" name="answer" id="b">
+                    <span class="checkmark"></span> 
+                    <label class="quiz__label" id="b_text" for="b">Question</label>
                 </li>
                 <li class="quiz__answer">
-                    <input type="radio" name="answer" id="c_text">
-                    <label for="c">Question</label>
+                    <input type="radio" class="answer" name="answer" id="c">
+                    <span class="checkmark"></span> 
+                    <label class="quiz__label" id="c_text" for="c">Question</label>
                 </li>
                 <li class="quiz__answer">
-                    <input type="radio" name="answer" id="d_text">
-                    <label for="d">Question</label>
+                    <input type="radio" class="answer" name="answer" id="d">
+                    <span class="checkmark"></span> 
+                    <label class="quiz__label" id="d_text" for="d">Question</label>
                 </li>
             </ul>
         </div>
-        <button class="quiz__button">Submit</button>
+        <button class="quiz__button" id="submit">Next</button>
     </div>
 </body>
 </html>

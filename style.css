@@ -1,19 +1,33 @@
-*{
+* {
 	padding: 0;
 	margin: 0;
 	border: 0;
 }
-*,*:before,*:after{
+*,
+*:before,
+*:after {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
 
-nav,footer,header,aside{display: block;}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
 
-html,body{
+html,
+body {
 	height: 100%;
 	width: 100%;
 	font-size: 100%;
@@ -23,36 +37,64 @@ html,body{
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
-input,button,textarea{font-family:inherit;}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
 
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
 
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
 
 body {
-    font-family: 'Josefin Slab', serif;
-    height: 100vh;
-   
-    color: #000;
-	background-image: url(https://wallpaper.dog/large/333834.jpg);
-    height: 100vh;
-    min-height: 480px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+	font-family: "Josefin Slab", serif;
+	height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	color: #000;
+	background-image: url(img/hogwartsBg.webp);
+	height: 100vh;
+	min-height: 480px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	justify-content: center;
-    text-align: center;
-    overflow-x: hidden;
+	text-align: center;
+	overflow-x: hidden;
 }
 
 .quiz__container {
@@ -60,35 +102,168 @@ body {
 	color: rgb(207, 233, 173);
 	width: 600px;
 	max-width: 100%;
-	box-shadow: 0 0 10px 5px rgba(172,16,16, 0.4);
-	background: rgb(172,16,16);
-	background: linear-gradient(115deg, rgba(172,16,16,1) 0%, rgba(187,182,24,1) 100%);
+	box-shadow: 0 0 10px 5px rgba(172, 16, 16, 0.4);
+	background: rgb(172, 16, 16);
+	background: linear-gradient(115deg, rgba(172, 16, 16, 1) 0%, rgba(187, 182, 24, 1) 100%);
 }
 
 .quiz__header {
 	padding: 4rem 2rem 2rem;
+	position: relative;
 }
 
 .quiz__question {
 	font-size: 3rem;
 	font-weight: 600;
+	margin-bottom: 0.5rem;
 }
-.quiz__list {
-	margin-left: 8rem;
-}
+
 .quiz__answer {
-	font-size: 1.7rem;
-	font-weight: 300;
-	margin: 1rem 0;
-	text-align: left;
+	margin-left: 6rem;
+	position: relative;
 }
+
+.quiz__label {
+	font-size: 2rem;
+	font-weight: 300;
+	padding: 1rem 0;
+	text-align: left;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	padding-left: 3rem;
+	max-width: 90%;
+	z-index: 9;
+	padding-top: 1.4rem;
+}
+
+
 .quiz__button {
-	background: rgb(62,16,172);
-	background: linear-gradient(100deg, rgba(62,16,172,1) 0%, rgba(113,111,39,1) 100%);
+	background: rgb(62, 16, 172);
+	background: linear-gradient(100deg, rgba(62, 16, 172, 1) 0%, rgba(113, 111, 39, 1) 100%);
 	color: #fff;
 	width: 100%;
 	font-size: 2rem;
-	padding: 1.5rem 0;
+	padding: 2rem 0;
 	display: block;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 	font-family: inherit;
+	transition: all .4s;
+}
+
+.quiz__button:hover {
+	color: rgb(207, 233, 173);
+}
+
+.final-text {
+	font-size: 2rem;
+	padding: 2rem 0;
+}
+
+.quiz__number {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 1.8rem;
+	z-index: 3;
+	font-weight: 300;
+}
+
+/* Hide the browser's default radio button */
+.quiz__answer input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+	pointer-events: none;
+	font-size: 14px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	z-index: 0;
+	height: 1.78em;
+	width: 1.78em;
+	background-color: #fff;
+	border-radius: 50%;
+	transition: all 0.3s;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .quiz__answer:hover input ~ .checkmark {
+	background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .quiz__answer input:checked ~ .checkmark {
+	background-color: rgb(62, 16, 172);
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .quiz__answer input:checked ~ .checkmark:after {
+	display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .quiz__answer .checkmark:after {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 0.57em;
+	height: 0.57em;
+	border-radius: 50%;
+	background: white;
+  }
+
+@media (max-width: 767.98px) {
+	html {
+		font-size: 12px;
+	}
+	.quiz__container {
+		width: 450px;
+	}
+
+	.quiz__answer {
+		margin-left: 5.4rem;
+	}
+
+	.quiz__question {
+		font-size: 2.7rem;
+	}
+	.checkmark {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 479.98px) {
+	html {
+		font-size: 11px;
+	}
+	.quiz__container {
+		width: 300px;
+	}
+
+	.quiz__answer {
+		padding-left: 0rem;
+	}
+
+	.quiz__question {
+		font-size: 2.5rem;
+	}
+	.checkmark {
+		font-size: 11px;
+	}
 }
