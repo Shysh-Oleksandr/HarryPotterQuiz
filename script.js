@@ -1,44 +1,60 @@
 const quizData = [
     {
-        question: 'How old is Florin?',
-        a: '10',
-        b: '17',
-        c: '26',
-        d: '110',
-        correct: 'c'
-    },
-    {
-        question: 'What is the most used programming language in 2019?',
-        a: 'Java',
-        b: 'C',
-        c: 'Python',
-        d: 'JavaScript',
-        correct: 'a'
-    },
-    {
-        question: 'Who is the President of US?',
-        a: 'Florin Pop',
-        b: 'Donald Trump',
-        c: 'Ivan Saldano',
-        d: 'Mihai Andrei',
+        question: "Who were Harry's parents?",
+        a: 'Henry and Maggie Potter',
+        b: 'James and Lily Potter',
+        c: 'Arhur and Molly Potter',
+        d: 'William and Elizabeth Potter',
         correct: 'b'
     },
     {
-        question: 'What does HTML stand for?',
-        a: 'Hypertext Markup Language',
-        b: 'Cascading Style Sheet',
-        c: 'Jason Object Notation',
-        d: 'Helicopters Terminals Motoboats Lamborginis',
+        question: 'Who are the muggle aunt and uncle that Harry must live with every summer?',
+        a: 'Ralph and Magnolia Dudley',
+        b: 'Ned and Camilla Diddly',
+        c: 'Ronald and Molly Weasley',
+        d: 'Vernon and Petunia Dursley',
+        correct: 'd'
+    },
+    {
+        question: 'In order of birth, who are the seven Weasley siblings?',
+        a: 'Charlie, Percy, Bill, Fred, George, Ron, Ginny',
+        b: 'Bill, Charlie, Percy, Fred, George, Ron, Ginny',
+        c: 'George, Fred, Percy, Bill, Charlie, Ron, Ginny',
+        d: 'Percy, Bill, George, Charlie, Fred, Ron, Ginny',
+        correct: 'b'
+    },
+    {
+        question: 'What are the three Unforgivable Curses?',
+        a: 'Impedimenta, Incarcerous and Incendio',
+        b: 'Avada Kedavra, Imperio and Diffindo',
+        c: 'Expelliarmus, Expecto Patronum and Diffindo',
+        d: 'Avada Kedavra, Crucio and Imperio',
+        correct: 'd'
+    },
+    {
+        question: 'Which of these Hogwarts professors teaches Transfiguration?',
+        a: 'McGonagall',
+        b: 'Snape',
+        c: 'Quirrell',
+        d: 'Sprout',
         correct: 'a'
     },
     {
-        question: 'What year was JavaScript launched?',
-        a: '2020',
-        b: '1999',
-        c: '2010',
-        d: 'none of the above',
+        question: 'Who first shows Harry the diary of Tom Riddle?',
+        a: 'Quirrell',
+        b: 'Moaning Myrtle',
+        c: 'Fawkes',
+        d: 'Nearly Headless Nick',
         correct: 'd'
-    }
+    },
+    {
+        question: 'Which item was NOT protecting the sorcerer\'s stone\'s hiding place?',
+        a: 'Professor McGonagall\'s Living Chess Room',
+        b: 'A Blast-Ended Skrewt',
+        c: 'Snape\'s potions puzzle',
+        d: 'A three-headed dog',
+        correct: 'b'
+    },
 ];
 
 const questionEl = document.getElementById('question');
